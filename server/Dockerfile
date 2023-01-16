@@ -17,3 +17,5 @@ EXPOSE 19132
 # docker volume create current-world
 # docker run -it --network bedrock --network-alias bed --mount type=volume,src=current-world,target=/server/worlds bedrock-server
 # /stop
+
+# docker rm -f $(docker ps -a -q)
