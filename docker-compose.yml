@@ -3,6 +3,7 @@ services:
     build: ./server
     volumes:
       - current-world:/server/worlds
+      - ${BACKUP_PATH:-./backups}:/backups
     networks:
       bedrock:
 
@@ -22,4 +23,4 @@ networks:
           ip_range: "192.168.0.64/26"
           gateway: '192.168.1.1'
 
-# docker rm -f $(docker ps -a -q) && docker volume rm $(docker volume ls -q) && docker network rm bedrock
+# docker rm -f $(docker ps -a -q) && docker volume rm $(docker volume ls -q) && docker network rm bedrock && docker image rm $(docker image ls -q)

@@ -1,11 +1,10 @@
 # syntax=docker/dockerfile:1
 
 FROM ubuntu:latest
-WORKDIR /server
+WORKDIR /Server
 RUN apt update
 RUN apt upgrade
-RUN apt-get install curl -y
-RUN apt-get install nodejs -y
+RUN apt-get install -y curl
 COPY . .
 CMD ["./bedrock_server"]
 EXPOSE 19132
@@ -17,5 +16,3 @@ EXPOSE 19132
 # docker volume create current-world
 # docker run -it --network bedrock --network-alias bed --mount type=volume,src=current-world,target=/server/worlds bedrock-server
 # /stop
-
-# docker rm -f $(docker ps -a -q)
