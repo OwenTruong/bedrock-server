@@ -6,6 +6,12 @@ services:
       - ${BACKUP_PATH:-./backups}:/backups
     networks:
       bedrock:
+  create-backups:
+    build: ./backup-manager
+    volumes:
+    - current-world:/current
+    - ${BACKUP_PATH:-./backups}:/backups
+
 
 volumes:
   current-world:
