@@ -1,1 +1,10 @@
-
+services:
+  bedrock-server:
+    image: ubuntu:latest
+    command: apt update && apt upgrade && apt-get install curl nodejs -y
+    ports:
+      - 19132:19132
+    networks:
+      vlan:
+        ipv4_address: 192.168.1.42
+    working_dir: /server
