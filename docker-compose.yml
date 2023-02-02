@@ -9,9 +9,8 @@ services:
   create-backups:
     build: ./backup-manager
     volumes:
-    - current-world:/current
-    - ${BACKUP_PATH:-./backups}:/backups
-
+      - current-world:/current
+      - ${BACKUP_PATH:-./backups}:/backups
 
 volumes:
   current-world:
@@ -27,6 +26,13 @@ networks:
       config:
         - subnet: "192.168.1.0/24"
           ip_range: "192.168.0.64/26"
-          gateway: '192.168.1.1'
-
+          gateway: "192.168.1.1"
 # docker rm -f $(docker ps -a -q) && docker volume rm $(docker volume ls -q) && docker network rm bedrock && docker image rm $(docker image ls -q)
+
+# docker compose up -d for detached mode
+# docker compose up for normal mode
+# docker exec -it <container-id> /bin/bash to get a bash shell for that container
+
+# Questions
+# Do we have to compose everytime we want to use it for simplicity's sake?
+
