@@ -45,21 +45,33 @@ const getWorldNames = (dirPath) =>
     .filter((name) => fs.statSync(join(dirPath, name)).isDirectory());
 
 /**
- * @param {string} dirPath
- * @returns {string} Returns the path of the last modified file/folder in the directory path, dirPath
+ *
+ * @param {string[]} names
+ * @returns {string[]} names of files sorted in chronological order
  */
-const getLastModifiedPath = (dirPath) => {
-  const files = fs.readdirSync(dirPath);
-  return join(
-    dirPath,
-    files
-      .map((name) => ({
-        name: name,
-        time: fs.statSync(join(dirPath, name)).mtime.getTime(),
-      }))
-      .sort((a, b) => a.time - b.time)
-      .map((file) => file.name)[0]
-  );
+const sortDirsByChrono = (names) =>
+  names
+    .map((name) => ({
+      name: name,
+      time: fs.statSync(join(dirPath, name)).mtime.getTime(),
+    }))
+    .sort((a, b) => a.time - b.time)
+    .map((file) => file.name);
+
+/**
+ * @param {string} dirPath
+ * @returns {string} Returns the path of the oldest modified file/folder in the directory path, dirPath
+ */
+const getOldestDirPath = (dirPath) =>
+  join(dirPath, sortDirsByChrono(fs.readdirSync(dirPath))[0]);
+
+/**
+ * @param {string} dirPath
+ * @returns {string} Returns the path of the newest modified file/folder in the directory path, dirPath
+ */
+const getNewestDirPath = (dirPath) => {
+  const names = fs.readdirSync(dirPath);
+  join(dirPath, sortDirsByChrono(names)[names.length - 1]);
 };
 
 /**
@@ -81,7 +93,7 @@ const setBackupTime = (time, maxBackups) => {
     const currentWorldName = basename(currentWorldPath);
 
     if (getWorldNames(BACKUP_PATH).length >= maxBackups)
-      fs.rmSync(getLastModifiedPath(BACKUP_PATH), {
+      fs.rmSync(getOldestDirPath(BACKUP_PATH), {
         recursive: true,
         force: true,
       });
@@ -105,6 +117,7 @@ const waitForWorldGeneration = (ms, startBackups) => {
 };
 
 (() => {
+  const CURRENT_WORLD_PATH = `${CURRENT_PATH}/Bedrock\ level`;
   const [current, ...otherCurrents] = getWorldNames(CURRENT_PATH);
   const backups = getWorldNames(BACKUP_PATH);
   const backupTimeInMin = 20;
@@ -115,9 +128,10 @@ const waitForWorldGeneration = (ms, startBackups) => {
 
   if (!doesExist(current) && isZero(backups.length))
     waitForWorldGeneration(500, setBackupTime.bind(null, backupTimeInMS, 15));
-  else if (!doesExist(current) && !isZero(backups.length))
-    console.log('Copy most recent world in /backups to /current');
-  else if (doesExist(current)) setBackupTime(backupTimeInMS, 15);
+  else if (!doesExist(current) && !isZero(backups.length)) {
+    fs.cpSync(getNewestDirPath(BACKUP_PATH), CURRENT_WORLD_PATH);
+    setBackupTime(backupTimeInMS, 15);
+  } else if (doesExist(current)) setBackupTime(backupTimeInMS, 15);
   else
     console.error(
       'Unknown Error while checking current-world volume and backups bind mount'
