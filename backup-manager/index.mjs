@@ -43,20 +43,19 @@ const getWorldNames = (dirPath) =>
   fs
     .readdirSync(dirPath)
     .filter((name) => fs.statSync(join(dirPath, name)).isDirectory());
-// TODO: Figure out a way to get the last modified time of each file
 
 /**
  * @param {string} dirPath
- * @returns {string} Returns the path of the last modified file in the directory path, dirPath
+ * @returns {string} Returns the path of the last modified file/folder in the directory path, dirPath
  */
-const getLastModified = (dirPath) => {
+const getLastModifiedPath = (dirPath) => {
   const files = fs.readdirSync(dirPath);
   return join(
     dirPath,
     files
-      .map((fileName) => ({
-        name: fileName,
-        time: fs.statSync(join(dirPath, fileName)).mtime.getTime(),
+      .map((name) => ({
+        name: name,
+        time: fs.statSync(join(dirPath, name)).mtime.getTime(),
       }))
       .sort((a, b) => a.time - b.time)
       .map((file) => file.name)[0]
@@ -69,39 +68,56 @@ const getLastModified = (dirPath) => {
  * @param {number} maxBackups
  */
 const setBackupTime = (time, maxBackups) => {
+  const getDstPath = (currentWorldName) => {
+    const date = new Date();
+    return `${BACKUP_PATH}/${currentWorldName}-${date.getFullYear()}-${
+      date.getMonth() + 1
+    }-${date.getDate()}--${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
+  };
+
   setInterval(() => {
     const currentWorldPath =
       CURRENT_PATH + '/' + getWorldNames(CURRENT_PATH)[0];
     const currentWorldName = basename(currentWorldPath);
 
     if (getWorldNames(BACKUP_PATH).length >= maxBackups)
-      fs.rmSync(getLastModified(BACKUP_PATH), { recursive: true, force: true });
+      fs.rmSync(getLastModifiedPath(BACKUP_PATH), {
+        recursive: true,
+        force: true,
+      });
 
-    const date = new Date();
-    const dstPath = `${BACKUP_PATH}/${currentWorldName}-${date.getFullYear()}-${
-      date.getMonth() + 1
-    }-${date.getDate()}--${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`;
-
-    fs.cpSync(currentWorldPath, dstPath, { recursive: true });
+    fs.cpSync(currentWorldPath, getDstPath(currentWorldName), {
+      recursive: true,
+    });
   }, time);
+};
+
+/**
+ *
+ * @param {number} ms
+ * @param {*} startBackups - setBackupTime but with all parameters filled out already
+ */
+const waitForWorldGeneration = (ms, startBackups) => {
+  setTimeout(() => {
+    if (getWorldNames(CURRENT_PATH).length != 0) startBackups();
+    else waitForWorldGeneration(ms, startBackups);
+  }, ms);
 };
 
 (() => {
   const [current, ...otherCurrents] = getWorldNames(CURRENT_PATH);
   const backups = getWorldNames(BACKUP_PATH);
-  const backupTimeInMinutes = 20;
-
-  // setBackupTime(backupTimeInMinutes * 60 * 1000, 15);
+  const backupTimeInMin = 20;
+  const backupTimeInMS = backupTimeInMin * 60 * 1000;
 
   if (otherCurrents.length !== 0)
     throw new Error('current-world volume has more than 1 world');
 
   if (!doesExist(current) && isZero(backups.length))
-    console.log('SetInterval 500ms to check if /current has a filename');
+    waitForWorldGeneration(500, setBackupTime.bind(null, backupTimeInMS, 15));
   else if (!doesExist(current) && !isZero(backups.length))
     console.log('Copy most recent world in /backups to /current');
-  else if (doesExist(current) && isZero(backups.length))
-    console.log('SetInterval now and 20000ms backup /current to /backups');
+  else if (doesExist(current)) setBackupTime(backupTimeInMS, 15);
   else
     console.error(
       'Unknown Error while checking current-world volume and backups bind mount'
