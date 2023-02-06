@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 FROM ubuntu:latest
-WORKDIR /Server
+WORKDIR /server
 RUN apt update
 RUN apt upgrade
 RUN apt-get install -y curl
