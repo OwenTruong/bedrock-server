@@ -2,10 +2,12 @@
 
 FROM ubuntu:latest
 WORKDIR /server
-RUN apt update
-RUN apt upgrade
-RUN apt-get install -y curl
 COPY . .
+RUN apt update
+RUN apt-get install -y curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
+RUN node index.mjs
 CMD ["./bedrock_server"]
 EXPOSE 19132
 

@@ -6,11 +6,17 @@ services:
       - ${BACKUP_PATH:-./backups}:/backups
     networks:
       bedrock:
+
   create-backups:
     build: ./backup-manager
     volumes:
       - current-world:/current
       - ${BACKUP_PATH:-./backups}:/backups
+    environment:
+      - BACKUP_PATH=${BACKUP_MNT_PATH:-/backups}
+      - CURRENT_WORLD_PATH=${CURRENT_MNT_PATH:-/current}
+      - BACKUP_TIME=${BACKUP_TIME:-0.10}
+      - NUM_OF_BACKUPS=${NUM_OF_BACKUPS:-15}
 
 volumes:
   current-world:
@@ -24,9 +30,9 @@ networks:
       parent: eno1
     ipam:
       config:
-        - subnet: "192.168.1.0/24"
-          ip_range: "192.168.0.64/26"
-          gateway: "192.168.1.1"
+        - subnet: '192.168.1.0/24'
+          ip_range: '192.168.0.64/26'
+          gateway: '192.168.1.1'
 # docker rm -f $(docker ps -a -q) && docker volume rm $(docker volume ls -q) && docker network rm bedrock && docker image rm $(docker image ls -q)
 
 # docker compose up -d for detached mode

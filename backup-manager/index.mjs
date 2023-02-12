@@ -22,14 +22,17 @@ Yes cur and yes backup -> Immediately backup cur to backup bind mount
 /* All other cases */
 // setInterval to copy the dir in /current to /backups and name it with the current time.
 
-// current
-// backups
+/*******************
+ * ENVIRONMENTAL CONSTANTS
+ *******************/
+const BACKUP_PATH = process.env.BACKUP_PATH;
+const CURRENT_PATH = process.env.CURRENT_WORLD_PATH;
+const BACKUP_TIME = process.env.BACKUP_TIME;
+const NUM_OF_BACKUPS = process.env.NUM_OF_BACKUPS;
 
-const BACKUP_PATH = '/backups';
-const CURRENT_PATH = '/current';
-
-const doesExist = (obj) => obj !== undefined;
-const isZero = (num) => num === 0;
+/*******************
+ * HELPER FUNCTIONS
+ *******************/
 
 const fileLog = (filePath, message) =>
   fs.writeFileSync(filePath, message, { flag: 'w' });
@@ -46,32 +49,32 @@ const getWorldNames = (dirPath) =>
 
 /**
  *
- * @param {string[]} names
+ * @param {string[]} paths -> path of the directories (need to make sure all of the directories are in the same parent directory)
  * @returns {string[]} names of files sorted in chronological order
  */
-const sortDirsByChrono = (names) =>
-  names
-    .map((name) => ({
-      name: name,
-      time: fs.statSync(join(dirPath, name)).mtime.getTime(),
-    }))
-    .sort((a, b) => a.time - b.time)
-    .map((file) => file.name);
 
 /**
- * @param {string} dirPath
- * @returns {string} Returns the path of the oldest modified file/folder in the directory path, dirPath
+ *
+ * @param {string} parentDirPath
+ * @param {number} index -> Index of 0 represents the first element, index of -1 represents the last element
+ * @returns {string}
  */
-const getOldestDirPath = (dirPath) =>
-  join(dirPath, sortDirsByChrono(fs.readdirSync(dirPath))[0]);
+const getChildDirPathOf = (parentDirPath, index) => {
+  const sortDirs = (paths) =>
+    paths
+      .map((path) => ({
+        path,
+        time: fs.statSync(path).mtime.getTime(),
+      }))
+      .sort((a, b) => a.time - b.time)
+      .map((dir) => dir.path);
 
-/**
- * @param {string} dirPath
- * @returns {string} Returns the path of the newest modified file/folder in the directory path, dirPath
- */
-const getNewestDirPath = (dirPath) => {
-  const names = fs.readdirSync(dirPath);
-  join(dirPath, sortDirsByChrono(names)[names.length - 1]);
+  const childDirPaths = fs
+    .readdirSync(parentDirPath)
+    .map((childName) => join(parentDirPath, childName));
+
+  if (index === -1) return sortDirs(childDirPaths)[childDirPaths.length - 1];
+  else return sortDirs(childDirPaths).slice(index, index + 1)[0];
 };
 
 /**
@@ -93,7 +96,7 @@ const setBackupTime = (time, maxBackups) => {
     const currentWorldName = basename(currentWorldPath);
 
     if (getWorldNames(BACKUP_PATH).length >= maxBackups)
-      fs.rmSync(getOldestDirPath(BACKUP_PATH), {
+      fs.rmSync(getChildDirPathOf(BACKUP_PATH, 0), {
         recursive: true,
         force: true,
       });
@@ -116,22 +119,31 @@ const waitForWorldGeneration = (ms, startBackups) => {
   }, ms);
 };
 
+/*******************
+ * START HERE
+ *******************/
+
 (() => {
+  const doesExist = (obj) => obj !== undefined;
+  const isZero = (num) => num === 0;
+
   const CURRENT_WORLD_PATH = `${CURRENT_PATH}/Bedrock\ level`;
   const [current, ...otherCurrents] = getWorldNames(CURRENT_PATH);
   const backups = getWorldNames(BACKUP_PATH);
-  const backupTimeInMin = 20;
+  const backupTimeInMin = BACKUP_TIME;
   const backupTimeInMS = backupTimeInMin * 60 * 1000;
-
   if (otherCurrents.length !== 0)
     throw new Error('current-world volume has more than 1 world');
 
   if (!doesExist(current) && isZero(backups.length))
-    waitForWorldGeneration(500, setBackupTime.bind(null, backupTimeInMS, 15));
+    waitForWorldGeneration(
+      500,
+      setBackupTime.bind(null, backupTimeInMS, NUM_OF_BACKUPS)
+    );
   else if (!doesExist(current) && !isZero(backups.length)) {
-    fs.cpSync(getNewestDirPath(BACKUP_PATH), CURRENT_WORLD_PATH);
-    setBackupTime(backupTimeInMS, 15);
-  } else if (doesExist(current)) setBackupTime(backupTimeInMS, 15);
+    fs.cpSync(getChildDirPathOf(BACKUP_PATH, -1), CURRENT_WORLD_PATH);
+    setBackupTime(backupTimeInMS, NUM_OF_BACKUPS);
+  } else if (doesExist(current)) setBackupTime(backupTimeInMS, NUM_OF_BACKUPS);
   else
     console.error(
       'Unknown Error while checking current-world volume and backups bind mount'
