@@ -1,0 +1,56 @@
+{
+	"resource_pack_name": "Not Enough Teleporters",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"telepad_deactivator": {
+			"textures": [
+				"textures/items/telepad_deactivator"
+			]
+		},
+		"steel_drill": {
+			"textures": [
+				"textures/items/steel_drill"
+			]
+		},
+		"steel_ingot": {
+			"textures": [
+				"textures/items/steel_ingot"
+			]
+		},
+		"steel_drill_bit": {
+			"textures": [
+				"textures/items/steel_drill_bit"
+			]
+		},
+		"steel_drill_motor": {
+			"textures": [
+				"textures/items/steel_drill_motor"
+			]
+		},
+		"orange_cloth": {
+			"textures": [
+				"textures/items/orange_cloth"
+			]
+		},
+		"trithorium_crystal": {
+			"textures": [
+				"textures/items/trithorium_crystal"
+			]
+		},
+		"steel_stick": {
+			"textures": [
+				"textures/items/steel_stick"
+			]
+		},
+		"trithorium_crystal_shard": {
+			"textures": [
+				"textures/items/trithorium_crystal_shard"
+			]
+		},
+		"unfortold_crystal": {
+			"textures": [
+				"textures/items/unfortold_crystal"
+			]
+		}
+	}
+}

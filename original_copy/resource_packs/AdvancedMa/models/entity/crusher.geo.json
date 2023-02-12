@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crusher",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [4, 2, 4], "size": [3, 10, 3], "uv": [48, 0]},
+						{"origin": [-7, 2, 4], "size": [3, 10, 3], "uv": [0, 0]},
+						{"origin": [-6, 2, -6], "size": [12, 10, 12], "uv": [0, 38]},
+						{"origin": [4, 2, -7], "size": [3, 10, 3], "uv": [48, 48]},
+						{"origin": [-7, 2, -7], "size": [3, 10, 3], "uv": [0, 20]},
+						{"origin": [-8, 12, -8], "size": [16, 4, 16], "uv": [0, 0]},
+						{"origin": [-8, 0, -8], "size": [16, 2, 16], "uv": [0, 20]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.vatonageconveyorslope",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 5, 1],
+					"rotation": [-42.5, 0, 0],
+					"cubes": [
+						{"origin": [-6, 5, -13], "size": [12, 1, 22], "uv": [0, 0]},
+						{"origin": [6, 5, -13], "size": [2, 2, 22], "uv": [0, 22]},
+						{"origin": [-8, 5, -13], "size": [2, 2, 22], "uv": [0, 22]}
+					]
+				}
+			]
+		}
+	]
+}

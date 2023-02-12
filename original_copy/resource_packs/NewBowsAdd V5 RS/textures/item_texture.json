@@ -1,0 +1,145 @@
+{
+	"resource_pack-name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"blaze_bow": {
+			"textures": "textures/items/blaze_bow.png"
+		},
+		"stone_bow": {
+			"textures": "textures/items/stone_bow.png"
+		},
+		"slime_bow": {
+			"textures": "textures/items/slime_bow.png"
+		},
+		"sponge_bow": {
+			"textures": "textures/items/sponge_bow.png"
+		},
+
+
+
+		"mini_bow": {
+			"textures": "textures/items/mini_bow.png"
+		},
+		"shulker_bow": {
+			"textures": "textures/items/shulker_bow.png"
+		},
+		"long_arrow": {
+			"textures": "textures/items/arrow/long_arrow.png"
+		},
+		"ice_arrow": {
+			"textures": "textures/items/arrow/ice_arrow.png"
+		},
+		"stone_arrow": {
+			"textures": "textures/items/arrow/stone_arrow.png"
+		},
+		"gold_arrow": {
+			"textures": "textures/items/arrow/gold_arrow.png"
+		},
+		"lapis_arrow": {
+			"textures": "textures/items/arrow/lapis_arrow.png"
+		},
+		"redstone_arrow": {
+			"textures": "textures/items/arrow/redstone_arrow.png"
+		},
+		"iron_arrow": {
+			"textures": "textures/items/arrow/iron_arrow.png"
+		},
+		"diamond_arrow": {
+			"textures": "textures/items/arrow/diamond_arrow.png"
+		},
+		"shulker_arrow": {
+			"textures": "textures/items/arrow/shulker_arrow.png"
+		},
+		"tnt_arrow": {
+			"textures": "textures/items/arrow/tnt_arrow.png"
+		},
+		"mini_arrow": {
+			"textures": "textures/items/arrow/mini_arrow.png"
+		},
+		"wither_arrow": {
+			"textures": "textures/items/arrow/wither_arrow.png"
+		},
+		"slime_arrow": {
+			"textures": "textures/items/arrow/slime_arrow.png"
+		},
+		"blaze_arrow": {
+			"textures": "textures/items/arrow/blaze_arrow.png"
+		},
+		"sponge_arrow": {
+			"textures": "textures/items/arrow/sponge_arrow.png"
+		},
+		"ender_arrow": {
+			"textures": "textures/items/arrow/ender_arrow.png"
+		},
+		"glowstone_arrow": {
+			"textures": "textures/items/arrow/glowstone_arrow.png"
+		},
+		"health_arrow": {
+			"textures": "textures/items/arrow/health_arrow.png"
+		},
+		"knockback_arrow": {
+			"textures": "textures/items/arrow/knockback_arrow.png"
+		},
+		"miner_arrow": {
+			"textures": "textures/items/arrow/miner_arrow.png"
+		},
+		"magnet_arrow": {
+			"textures": "textures/items/arrow/magnet_arrow.png"
+		},
+		"thunder_arrow": {
+			"textures": "textures/items/arrow/thunder_arrow"
+		},
+		"wither_bow": {
+			"textures": "textures/items/wither_bow.png"
+		},
+		"magnet_bow": {
+			"textures": "textures/items/magnet_bow.png"
+		},
+		"gold_bow": {
+			"textures": "textures/items/gold_bow.png"
+		},
+		"lapis_bow": {
+			"textures": "textures/items/lapis_bow.png"
+		},
+		"redstone_bow": {
+			"textures": "textures/items/redstone_bow.png"
+		},
+		"iron_bow": {
+			"textures": "textures/items/iron_bow.png"
+		},
+		"diamond_bow": {
+			"textures": "textures/items/diamond_bow.png"
+		},
+		"long_bow": {
+			"textures": "textures/items/long_bow.png"
+		},
+		"ender_bow": {
+			"textures": "textures/items/ender_bow.png"
+		},
+		"glowstone_bow": {
+			"textures": "textures/items/glowstone_bow.png"
+		},
+		"spider_bow": {
+			"textures": "textures/items/spider_bow.png"
+		},
+		"thunder_bow": {
+			"textures": "textures/items/thunder_bow.png"
+		},
+		"miner_bow": {
+			"textures": "textures/items/miner_bow.png"
+		},
+		"health_bow": {
+			"textures": "textures/items/health_bow.png"
+		},
+		"knockback_bow": {
+			"textures": "textures/items/knockback_bow.png"
+		},
+		"explosive_bow": {
+			"textures": "textures/items/explosive_bow.png"
+		},
+		"ice_bow": {
+			"textures": "textures/items/ice_bow.png"
+		}
+	}
+}
+

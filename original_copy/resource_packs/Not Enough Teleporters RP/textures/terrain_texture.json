@@ -1,0 +1,113 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Not Enough Teleporters",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"red_landing_pad": {
+			"textures": "textures/blocks/red_landing_pad"
+		},
+		"blue_landing_pad": {
+			"textures": "textures/blocks/blue_landing_pad"
+		},
+		"orange_teleportation_pad": {
+			"textures": "textures/blocks/orange_teleportation_pad"
+		},
+		"orange_landing_pad": {
+			"textures": "textures/blocks/orange_landing_pad"
+		},
+		"lime_teleportation_pad": {
+			"textures": "textures/blocks/lime_teleportation_pad"
+		},
+		"lime_landing_pad": {
+			"textures": "textures/blocks/lime_landing_pad"
+		},
+		"brown_teleportation_pad": {
+			"textures": "textures/blocks/brown_teleportation_pad"
+		},
+		"brown_landing_pad": {
+			"textures": "textures/blocks/brown_landing_pad"
+		},
+		"magenta_teleportation_pad": {
+			"textures": "textures/blocks/magenta_teleportation_pad"
+		},
+		"pink_teleportation_pad": {
+			"textures": "textures/blocks/pink_teleportation_pad"
+		},
+		"purple_teleportation_pad": {
+			"textures": "textures/blocks/purple_teleportation_pad"
+		},
+		"white_teleportation_pad": {
+			"textures": "textures/blocks/white_teleportation_pad"
+		},
+		"green_teleportation_pad": {
+			"textures": "textures/blocks/green_teleportation_pad"
+		},
+		"gray_teleportation_pad": {
+			"textures": "textures/blocks/gray_teleportation_pad"
+		},
+		"light_gray_teleportation_pad": {
+			"textures": "textures/blocks/light_gray_teleportation_pad"
+		},
+		"black_teleportation_pad": {
+			"textures": "textures/blocks/black_teleportation_pad"
+		},
+		"light_blue_teleportation_pad": {
+			"textures": "textures/blocks/light_blue_teleportation_pad"
+		},
+		"yellow_teleportation_pad": {
+			"textures": "textures/blocks/yellow_teleportation_pad"
+		},
+		"cyan_teleportation_pad": {
+			"textures": "textures/blocks/cyan_teleportation_pad"
+		},
+		"magenta_landing_pad": {
+			"textures": "textures/blocks/magenta_landing_pad"
+		},
+		"pink_landing_pad": {
+			"textures": "textures/blocks/pink_landing_pad"
+		},
+		"purple_landing_pad": {
+			"textures": "textures/blocks/purple_landing_pad"
+		},
+		"white_landing_pad": {
+			"textures": "textures/blocks/white_landing_pad"
+		},
+		"green_landing_pad": {
+			"textures": "textures/blocks/green_landing_pad"
+		},
+		"gray_landing_pad": {
+			"textures": "textures/blocks/gray_landing_pad"
+		},
+		"light_gray_landing_pad": {
+			"textures": "textures/blocks/light_gray_landing_pad"
+		},
+		"black_landing_pad": {
+			"textures": "textures/blocks/black_landing_pad"
+		},
+		"light_blue_landing_pad": {
+			"textures": "textures/blocks/light_blue_landing_pad"
+		},
+		"yellow_landing_pad": {
+			"textures": "textures/blocks/yellow_landing_pad"
+		},
+		"cyan_landing_pad": {
+			"textures": "textures/blocks/cyan_landing_pad"
+		},
+		"red_teleportation_pad": {
+			"textures": "textures/blocks/red_teleportation_pad"
+		},
+		"blue_teleportation_pad": {
+			"textures": "textures/blocks/blue_teleportation_pad"
+		},
+		"deactivated_landing_pad": {
+			"textures": "textures/blocks/deactivated_landing_pad"
+		},
+		"deactivated_teleportation_pad": {
+			"textures": "textures/blocks/deactivated_teleportation_pad"
+		},
+		"deepslate_trithorium_ore": {
+			"textures": "textures/blocks/deepslate_trithorium_ore"
+		}
+	}
+}

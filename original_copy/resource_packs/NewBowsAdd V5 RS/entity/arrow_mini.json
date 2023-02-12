@@ -1,0 +1,27 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "new:arrow_mini",
+      "materials": {
+        "default": "arrow"
+      },
+      "textures": {
+        "default": "textures/items/arrow/mini_arrow"
+      },
+      "geometry": {
+        "default": "geometry.arrow_img"
+      },
+      "animations": {
+        "move": "animation.arrow.target_rotation"
+      },
+      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+      "render_controllers": [ "controller.render.arrow" ]
+    }
+  }
+}

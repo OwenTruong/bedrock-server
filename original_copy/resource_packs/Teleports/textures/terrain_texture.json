@@ -1,0 +1,23 @@
+{
+  "resource_pack_name": "elevators",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "elevator_1": {
+      "textures": "textures/blocks/elevator_1"
+    },
+    "elevator_2": {
+      "textures": "textures/blocks/elevator_2"
+    },
+    "elevator_3": {
+      "textures": "textures/blocks/elevator_3"
+    },
+    "elevator_4": {
+      "textures": "textures/blocks/elevator_4"
+    },
+    "elevator_5": {
+      "textures": "textures/blocks/elevator_5"
+    }
+  }
+}

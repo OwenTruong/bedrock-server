@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "amep:battery1_active",
+      "materials": {
+         "default": "zombie"
+      },
+      "textures": {
+        "default": "textures/entity/controller"
+      },
+      "geometry": {
+        "default": "geometry.b1_controller"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

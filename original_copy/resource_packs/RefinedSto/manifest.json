@@ -1,0 +1,20 @@
+//Vatonage Studio Licence: Vatonage
+{
+    "format_version": 2,
+    "header": {
+        "description": "Created using Vatonage Studio",
+        "name": "Refined Storage",
+        "uuid": "125e7298-4086-4d7e-a5af-cbf15b48b3e9",
+        "version": [0, 0, 1],
+        "min_engine_version": [ 1, 13, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Created using Vatonage Studio",
+            "type": "resources",
+            "uuid": "5126ff6a-5d0e-469d-a45d-71eebb20689c",
+            "version": [0, 0, 1]
+        }
+    ]
+}
+            

@@ -1,0 +1,33 @@
+tile.vatonage:lava_generator.name=Lava Generator §a30 RF/s
+entity.vatonage:power_core.name=Power Core
+item.spawn_egg.entity.vatonage:power_core.name=Power Core
+tile.vatonage:combustion_generator.name=Combustion Generator §a24 RF/s
+tile.vatonage:matter_converter.name=Matter Converter §4100 RF/block
+tile.vatonage:mechanical_furnace.name=Mechanical Furnace §4100 RF/ore
+tile.vatonage:solar_generator.name=Solar Generator §a4 RF/s
+tile.vatonage:advanced_solar_generator.name=Advanced Solar Generator §a10 RF/s
+tile.vatonage:void_miner.name=Void Miner §420 RF/s
+tile.vatonage:auto_farmer.name=Auto Farmer §420 RF/s
+tile.vatonage:cobblestone_generator.name=Cobblestone Generator §45 RF/s
+tile.vatonage:vacuum_hopper.name=Vacuum Hopper §410 RF/s
+tile.vatonage:crusher.name=Crusher §440 RF/block
+tile.vatonage:sieve.name=Sieve
+tile.vatonage:barrel.name=Barrel
+tile.vatonage:chunk_loader.name=Chunk Loader
+
+tile.vatonage:endcake.name=End Cake
+tile.vatonage:spike.name=Spikes
+tile.vatonage:bio.name=Bio Generator §a20 RF/s
+tile.vatonage:steam.name=Steam Generator §a30 RF/s
+tile.vatonage:enderegggenerator.name=Dragon Egg Generator §a60 RF/s
+tile.vatonage:chopper.name=Chopper §4100 RF/tree
+tile.vatonage:fisher.name=Fisher §415 RF/s
+tile.vatonage:auto_sieve.name=Auto Sieve §430 RF/block
+tile.vatonage:hostile_spawner.name=Hostile Spawner §430 RF/s
+tile.vatonage:passive_spawner.name=Passive Spawner §420 RF/s
+tile.vatonage:nether_spawner.name=Nether Spawner §430 RF/s
+
+tile.vatonage:drying_rack.name=Drying Rack
+tile.vatonage:advancedconveyor.name=Advanced Conveyor
+tile.vatonage:conveyor.name=Conveyor
+tile.vatonage:block_breaker.name=Block Breaker §425 RF/s

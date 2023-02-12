@@ -1,0 +1,50 @@
+item.new:blaze_bow=Arco de Blaze
+item.new:ender_bow=Arco de Ender
+item.new:remote_bow=Arco de Mineria
+item.new:knockback_bow=Arco de Ataque en Area
+item.new:glowstone_bow=Arco de Piedra Luminosa
+item.new:health_bow=Arco de Regeneracion
+item.new:explosive_bow=Arco Explosivo
+item.new:ice_bow=Arco de Hielo
+item.new:thunder_bow=Arco de Rayo
+item.new:spider_bow=Arco de Telaraña
+
+tile.new:bow_table.name=Mesa de Arcos y Flechas
+
+item.new:magnet_bow=Arco Magnetico
+item.new:shulker_bow=Arco de Shulker
+item.new:long_bow=Arco Largo
+
+item.new:smoke_bow=Arco de Wither
+item.new:stone_bow=Arco de Piedra
+item.new:mini_bow=Arco Pequeño
+
+item.new:slime_bow=Arco de Slime
+item.new:sponge_bow=Arco de Esponga
+item.new:diamond_bow=Arco de Diamante
+item.new:iron_bow=Arco de Hierro
+item.new:gold_bow=Arco de Oro
+item.new:lapis_bow=Arco de Lapis
+item.new:redstone_bow=Arco de Redstone
+
+item.new:iron_arrow=Flecha de Hierro
+item.new:lapis_arrow=Flecha de Lapis
+item.new:redstone_arrow=Flecha de Redstone
+item.new:diamond_arrow=Flecha de Diamante
+item.new:gold_arrow=Flecha de Oro
+item.new:miner_arrow=Flecha de Mineria
+item.new:glowstone_arrow=Flecha de Piedra Luminosa
+item.new:stone_arrow=Flecha de Piedra
+item.new:blaze_arrow=Flecha de Blaze
+item.new:shulker_arrow=Flecha de Shulker
+item.new:ender_arrow=Flecha de Ender
+item.new:health_arrow=Flecha de Curacion
+item.new:ice_arrow=Flecha de Hielo
+item.new:knockback_arrow=Flecha de Ataque en Area
+item.new:thunder_arrow=Flecha de Rayo
+item.new:tnt_arrow=Flecha Explosiva
+item.new:mini_arrow=Flecha Pequeña
+item.new:wither_arrow=Flecha de Wither
+item.new:magnet_arrow=Flecha Magnetica
+item.new:slime_arrow=Flecha de Slime
+item.new:sponge_arrow=Flecha de Espongas

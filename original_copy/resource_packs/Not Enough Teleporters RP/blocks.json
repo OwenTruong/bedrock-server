@@ -1,0 +1,109 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"net:blue_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:red_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:red_landing_pad": {
+		"sound": "stone"
+	},
+	"net:blue_landing_pad": {
+		"sound": "stone"
+	},
+	"net:orange_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:orange_landing_pad": {
+		"sound": "stone"
+	},
+	"net:lime_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:lime_landing_pad": {
+		"sound": "stone"
+	},
+	"net:brown_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:brown_landing_pad": {
+		"sound": "stone"
+	},
+	"net:magenta_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:pink_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:purple_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:white_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:green_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:gray_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:light_gray_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:black_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:light_blue_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:yellow_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:cyan_teleportation_pad": {
+		"sound": "stone"
+	},
+	"net:magenta_landing_pad": {
+		"sound": "stone"
+	},
+	"net:pink_landing_pad": {
+		"sound": "stone"
+	},
+	"net:purple_landing_pad": {
+		"sound": "stone"
+	},
+	"net:white_landing_pad": {
+		"sound": "stone"
+	},
+	"net:green_landing_pad": {
+		"sound": "stone"
+	},
+	"net:gray_landing_pad": {
+		"sound": "stone"
+	},
+	"net:light_gray_landing_pad": {
+		"sound": "stone"
+	},
+	"net:black_landing_pad": {
+		"sound": "stone"
+	},
+	"net:light_blue_landing_pad": {
+		"sound": "stone"
+	},
+	"net:yellow_landing_pad": {
+		"sound": "stone"
+	},
+	"net:cyan_landing_pad": {
+		"sound": "stone"
+	},
+	"net:deactivated_landing_pad": {
+		"sound": "stone"
+	},
+	"net:deactivated_teleportation_pad": {
+		"sound": "stone"
+	}
+}

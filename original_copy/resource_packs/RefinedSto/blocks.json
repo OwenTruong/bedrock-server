@@ -1,0 +1,15 @@
+{
+  "format_version": [ 0, 0, 1 ],
+  "vatonage:storage_controller": {
+    "textures": "storage_controller",
+    "sound": "metal"
+  },
+  "vatonage:storage_import_monitor": {
+    "textures": "storage_import_monitor",
+    "sound": "metal"
+  },
+  "vatonage:storage_export_monitor": {
+    "textures": "storage_export_monitor",
+    "sound": "metal"
+  }
+}

@@ -1,0 +1,6 @@
+﻿item.pog:player_corpse_spawn_egg.name=Spawn Player Corpse
+text.death_coords.dimension.overworld=§aOverworld
+text.death_coords.dimension.nether=§cNether
+text.death_coords.dimension.end=§dEnd
+
+text.death.command.text=tellraw @s{"rawtext":[{"text": "§a${player.nameTag} §rdied at: §b${Math.round(player.location.x)}, ${Math.round(player.location.y)}, ${Math.round(player.location.z)},§r§f in The §a${dName}"}]}

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sieve",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 0, -7], "size": [2, 15, 2], "uv": [16, 57]},
+						{"origin": [-7, 13, -7], "size": [14, 0, 14], "uv": [28, 0]},
+						{"origin": [-7, 0, 5], "size": [2, 15, 2], "uv": [30, 53]},
+						{"origin": [5, 0, -7], "size": [2, 15, 2], "uv": [8, 57]},
+						{"origin": [7, 12, -8], "size": [1, 3, 16], "uv": [42, 14]},
+						{"origin": [-8, 12, -8], "size": [1, 3, 16], "uv": [40, 40]},
+						{"origin": [-7, 12, 7], "size": [14, 3, 1], "uv": [55, 36]},
+						{"origin": [-7, 12, -8], "size": [14, 3, 1], "uv": [0, 53]},
+						{"origin": [5, 0, 5], "size": [2, 15, 2], "uv": [0, 57]}
+					]
+				},
+				{
+					"name": "gravel1",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 12, -7], "size": [14, 4, 14], "uv": [0, 74]}
+					]
+				},
+				{
+					"name": "gravel2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 12, -7], "size": [14, 2, 14], "uv": [56, 74]}
+					]
+				},
+				{
+					"name": "gravel3",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 11.95, -7], "size": [14, 0, 14], "uv": [0, 93]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "amep:teleport_pylon",
+      "materials": {
+        "default": "zombie"
+      },
+      "textures": {
+        "default": "textures/entity/pylon"
+      },
+      "geometry": {
+        "default": "geometry.pylon"
+      },
+      "animation_controllers": [
+        { "walk": "controller.animation.default" }
+      ],
+      "animations": {
+        "walk": "animation.pylon.idle"
+      },
+      "render_controllers": [ "controller.render.zombie" ],
+      "spawn_egg": {
+        "texture": "spawn_pylon",
+        "texture_index": 0
+      }
+    }
+  }
+}

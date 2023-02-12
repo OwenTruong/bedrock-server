@@ -6,7 +6,19 @@ services:
       - ${BACKUP_PATH:-./backups}:/backups
     networks:
       bedrock:
-
+    environment:
+      - SERVER_NAME=${SERVER_NAME:-Dedicated\ Server}
+      - GAMEMODE=${GAMEMODE:-survival}
+      - FORCE_GAMEMODE=${FORCE_GAMEMODE:-false}
+      - DIFFICULTY=${DIFFICULTY:-normal}
+      - ALLOW_CHEATS=${ALLOW_CHEATS:-true}
+      - MAX_PLAYER=${MAX_PLAYER:-10}
+      - ONLINE_MODE=${ONLINE_MODE:-true}
+      - ALLOW_LIST=${ALLOW_LIST:-false}
+      - SERVER_PORT=${SERVER_PORT:-19132}
+      - SERVER_PORTV6=${SERVER_PORTV6:-19133}
+      - ENABLE_LAN_VISIBILITY=${ENABLE_LAN_VISIBILITY:-true}
+      - VIEW_DISTANCE=${VIEW_DISTANCE:-32}
   create-backups:
     build: ./backup-manager
     volumes:

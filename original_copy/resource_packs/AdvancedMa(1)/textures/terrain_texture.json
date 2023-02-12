@@ -1,0 +1,113 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "quarry_0": {
+      "textures": "textures/blocks/quarry/quarry_0"
+    },
+    "quarry_1": {
+      "textures": "textures/blocks/quarry/quarry_1"
+    },
+    "quarry_side": {
+      "textures": "textures/blocks/quarry/quarry_side"
+    },
+    "pump": {
+      "textures": "textures/blocks/pump"
+    },
+    "quarry_upgrade_lv1": {
+      "textures": "textures/blocks/quarry/quarry_upgrade_lv1"
+    },
+    "quarry_upgrade_lv1_active": {
+      "textures": "textures/blocks/quarry/quarry_upgrade_lv1_active"
+    },
+    "block_breaker": {
+      "textures": "textures/blocks/block_breaker"
+    },
+    "matter_randomizer": {
+      "textures": "textures/blocks/matter_randomizer"
+    },
+    "reactor_0": {
+      "textures": "textures/blocks/reactor_0/reactor_0"
+    },
+    "reactor_0_side": {
+      "textures": "textures/blocks/reactor_0/reactor_0_side"
+    },
+    "reactor_0_active": {
+      "textures": "textures/blocks/reactor_0/reactor_0_active"
+    },
+    "reactor_1_active": {
+      "textures": "textures/blocks/reactor_0/reactor_1_active"
+    },
+    "reactor_2_active": {
+      "textures": "textures/blocks/reactor_0/reactor_2_active"
+    },
+    "bonemealer": {
+      "textures": "textures/blocks/bonemealer"
+    },
+    "coolant_input": {
+      "textures": "textures/blocks/reactor_0/coolant_input"
+    },
+    "nreactor_input": {
+      "textures": "textures/blocks/reactor_0/nreactor_input"
+    },
+    "battery1_block": {
+      "textures": "textures/blocks/battery1_block"
+    },
+    "lava_tank": {
+      "textures": "textures/blocks/tank/lava_tank"
+  },
+    "water_tank": {
+      "textures": "textures/blocks/tank/water_tank"
+    },
+    "empty_tank": {
+      "textures": "textures/blocks/tank/empty_tank"
+    },
+    "mob_grinder": {
+      "textures": "textures/blocks/mobgrinder"
+    },
+    "mobessence_tank": {
+      "textures": "textures/blocks/tank/mobessence_tank"
+    },
+    "me_generator": {
+      "textures": "textures/blocks/me_gen"
+    },
+    "me_generator_full": {
+      "textures": "textures/blocks/me_gen_active"
+    },
+    "cable": {
+      "textures": "textures/blocks/cable"
+    },
+    "cableV": {
+      "textures": "textures/blocks/cableV"
+    },
+    "cableV2": {
+      "textures": "textures/blocks/cableV2"
+    },
+    "transfer_cable": {
+      "textures": "textures/blocks/transfer_cable"
+    },
+    "advanced_transfer_cable": {
+      "textures": "textures/blocks/transfer_cable2"
+    },
+    "connector_cable": {
+      "textures": "textures/blocks/connector_cable"
+    },
+    "connector_cableV": {
+      "textures": "textures/blocks/connector_cableV"
+    },
+    "conveyorslope2": {
+      "textures": "textures/blocks/vatonageconveyorslope2"
+    },
+    "conveyorslope": {
+      "textures": "textures/blocks/vatonageconveyorslope"
+    },
+    "conveyorsloped": {
+      "textures": "textures/blocks/vatonageconveyorsloped"
+    },
+    "conveyorsloped2": {
+      "textures": "textures/blocks/vatonageconveyorsloped2"
+    }
+  }
+}

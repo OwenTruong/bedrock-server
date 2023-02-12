@@ -1,0 +1,22 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Tinkers' Construct RP",
+		"description": "A Recreation of an innovative Java tool mod, by Stratospheer! (v1.6)",
+		"uuid": "ba2e5488-8ca0-4094-91da-a4180ba98946",
+		"version": [1, 6, 0],
+		"min_engine_version": [1, 13, 0]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "db071df7-6905-4f17-9a67-966d565e13d3",
+			"version": [1, 6, 0]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"blockbench_entity_wizard": ["1.0.9"]
+		}
+	}
+}

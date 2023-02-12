@@ -1,0 +1,13 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "vatonage:machineloot": {
+        "volume": 0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "death": "mob.endermen.idle"
+        }
+      }
+    }
+  }
+}

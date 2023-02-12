@@ -1,0 +1,354 @@
+{
+  "format_version": [ 0, 0, 1 ],
+  "amep:quarry_0": {
+    "textures": {
+      "up": "quarry_side",
+      "down": "quarry_side",
+      "north": "quarry_side",
+      "west": "quarry_side",
+      "east": "quarry_side",
+      "south": "quarry_0"
+    },
+    "sound": "stone"
+  },
+  "amep:quarry_1": {
+    "textures": {
+      "up": "quarry_side",
+      "down": "quarry_side",
+      "north": "quarry_side",
+      "west": "quarry_side",
+      "east": "quarry_side",
+      "south": "quarry_1"
+    },
+    "sound": "stone"
+  },
+  "amep:pump": {
+    "textures": "pump",
+    "sound": "stone"
+  },
+  "amep:quarry_upgrade_lv1": {
+    "textures": {
+      "up": "quarry_side",
+      "down": "quarry_side",
+      "north": "quarry_side",
+      "west": "quarry_side",
+      "east": "quarry_side",
+      "south": "quarry_upgrade_lv1"
+    },
+    "sound": "stone"
+  },
+  "amep:quarry_upgrade_lv1_active": {
+    "textures": {
+      "up": "quarry_side",
+      "down": "quarry_side",
+      "north": "quarry_side",
+      "west": "quarry_side",
+      "east": "quarry_side",
+      "south": "quarry_upgrade_lv1_active"
+    },
+    "sound": "stone"
+  },
+  "amep:block_breaker": {
+    "textures": "block_breaker",
+    "sound": "stone"
+  },
+  "amep:matter_randomizer": {
+    "textures": "matter_randomizer",
+    "sound": "stone"
+  },
+  "amep:reactor_0": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:reactor_0_active": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0_active",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:reactor_1_active": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_1_active",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:reactor_2_active": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_2_active",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:bonemealer": {
+    "textures": "bonemealer",
+    "sound": "stone"
+  },
+  "amep:reactor_block": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0_side",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:coolant_input": {
+    "textures": "coolant_input",
+    "sound": "stone"
+  },
+  "amep:reactor_0_bricked": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:reactor_1_bricked": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:reactor_2_bricked": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:nreactor_active": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0_active",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:nreactor_controller": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:nreactor_input": {
+    "textures": "nreactor_input",
+    "sound": "stone"
+  },
+  "amep:battery1_controller": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:battery1_active": {
+    "textures": {
+      "up": "reactor_0_side",
+      "down": "reactor_0_side",
+      "north": "reactor_0_active",
+      "west": "reactor_0_side",
+      "east": "reactor_0_side",
+      "south": "reactor_0_side"
+    },
+    "sound": "stone"
+  },
+  "amep:battery1_block": {
+    "textures": {
+      "up": "battery1_block",
+      "down": "battery1_block",
+      "north": "battery1_block",
+      "west": "battery1_block",
+      "east": "battery1_block",
+      "south": "battery1_block"
+    },
+    "sound": "stone"
+  },
+  "amep:lava_tank_0": {
+    "textures": "lava_tank",
+    "sound": "glass"
+  },
+  "amep:lava_tank_1": {
+    "textures": "lava_tank",
+    "sound": "glass"
+  },
+  "amep:lava_tank_2": {
+    "textures": "lava_tank",
+    "sound": "glass"
+  },
+  "amep:lava_tank_3": {
+    "textures": "lava_tank",
+    "sound": "glass"
+  },
+  "amep:water_tank_0": {
+    "textures": "water_tank",
+    "sound": "glass"
+  },
+  "amep:water_tank_1": {
+    "textures": "water_tank",
+    "sound": "glass"
+  },
+  "amep:water_tank_2": {
+    "textures": "water_tank",
+    "sound": "glass"
+  },
+  "amep:water_tank_3": {
+    "textures": "water_tank",
+    "sound": "glass"
+  },
+  "amep:empty_tank": {
+    "textures": "empty_tank",
+    "sound": "glass"
+  },
+  "amep:mobessence_tank_0": {
+    "textures": "mobessence_tank",
+    "sound": "glass"
+  },
+  "amep:mobessence_tank_1": {
+    "textures": "mobessence_tank",
+    "sound": "glass"
+  },
+  "amep:mobessence_tank_2": {
+    "textures": "mobessence_tank",
+    "sound": "glass"
+  },
+  "amep:mobessence_tank_3": {
+    "textures": "mobessence_tank",
+    "sound": "glass"
+  },
+  "amep:mob_grinder": {
+    "textures": "mob_grinder",
+    "sound": "stone"
+  },
+  "amep:me_generator": {
+    "textures": "me_generator",
+    "sound": "stone"
+  },
+  "amep:me_generator_full": {
+    "textures": "me_generator_full",
+    "sound": "stone"
+  },
+  "amep:cable": {
+    "textures": "cable",
+    "sound": "stone"
+  },
+  "amep:cableS": {
+    "textures": "cable",
+    "sound": "stone"
+  },
+  "amep:cableE": {
+    "textures": "cable",
+    "sound": "stone"
+  },
+  "amep:cableW": {
+    "textures": "cable",
+    "sound": "stone"
+  },
+  "amep:cableD": {
+    "textures": "cableV2",
+    "sound": "stone"
+  },
+  "amep:cableU": {
+    "textures": "cableV",
+    "sound": "stone"
+  },
+  "amep:transfer_cable": {
+    "textures": "transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cableS": {
+    "textures": "transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cableE": {
+    "textures": "transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cableW": {
+    "textures": "transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cable2": {
+    "textures": "advanced_transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cable2S": {
+    "textures": "advanced_transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cable2E": {
+    "textures": "advanced_transfer_cable",
+    "sound": "stone"
+  },
+  "amep:transfer_cable2W": {
+    "textures": "advanced_transfer_cable",
+    "sound": "stone"
+  },
+  "amep:connector_cable": {
+    "textures": "connector_cable",
+    "sound": "stone"
+  },
+  "amep:connector_cableS": {
+    "textures": "connector_cable",
+    "sound": "stone"
+  },
+  "amep:connector_cableE": {
+    "textures": "connector_cable",
+    "sound": "stone"
+  },
+  "amep:connector_cableW": {
+    "textures": "connector_cable",
+    "sound": "stone"
+  },
+  "amep:connector_cableV": {
+    "textures": "connector_cableV",
+    "sound": "stone"
+  }
+}

@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pylon",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "pylon_bottom",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 0, -7], "size": [14, 1, 14], "uv": [0, 0]},
+						{"origin": [-6, 1, -6], "size": [12, 1, 12], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "pylon_holders1",
+					"parent": "pylon_bottom",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [5, -2, -1], "size": [1, 12, 2], "pivot": [0, 0, 0], "rotation": [0, 0, -20], "uv": [16, 28]},
+						{"origin": [-6, -2, -1], "size": [1, 12, 2], "pivot": [0, 0, 0], "rotation": [0, 0, 20], "uv": [8, 0]}
+					]
+				},
+				{
+					"name": "pylon_holders2",
+					"parent": "pylon_bottom",
+					"pivot": [0, 0, -4],
+					"cubes": [
+						{"origin": [-1, -3, 5], "size": [2, 12, 1], "pivot": [0, 0, -4], "rotation": [15, 0, 0], "uv": [28, 28]},
+						{"origin": [-1, -1, -6], "size": [2, 12, 1], "pivot": [0, 0, -4], "rotation": [-15, 0, 0], "uv": [22, 28]}
+					]
+				},
+				{
+					"name": "pylon_top",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 10, -3], "size": [2, 1, 6], "uv": [0, 28]},
+						{"origin": [-2, 10, -2], "size": [1, 1, 4], "uv": [0, 20]},
+						{"origin": [1, 10, -2], "size": [1, 1, 4], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "pylon_beam",
+					"parent": "pylon_top",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 11, -1], "size": [2, 12, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

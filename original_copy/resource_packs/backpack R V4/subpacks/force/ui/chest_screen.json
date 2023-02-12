@@ -1,0 +1,324 @@
+{
+  "namespace": "chest",
+
+//chest label needed for getting the entity name
+  "chest_label": {
+    "$new_container_title|default": "$container_title",
+    "text": "$new_container_title"
+  },	
+
+  "small_chest_grid": {
+    "type": "grid",
+    "size": [ 162, 54 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 3 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+//custom Dynamic grid container
+  "my_custom_container_grid@common.container_grid": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+	"layer": 3,
+    "grid_item_template": "@common.container_item",
+    "collection_name": "container_items",
+	"$item_collection_name": "container_items"
+  },
+//---
+  "small_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 12 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "small_chest_grid@chest.small_chest_grid": {
+          "offset": [ 7, 9 ]
+        }
+      }
+    ]
+  },
+ 		
+//---
+
+//Credit Panel
+  "credit_panel_content":{
+	"type": "panel",
+	"controls":[
+	{"credit_label":{
+		"layer": 10,
+		"type": "image",
+		"size":[132,64],
+		"offset": [-2,0],
+		"texture": "textures/bp_ui_credit"
+	}},
+	{"credit_panel_container@common.common_panel":{
+		"layer": -1,
+		"size":[132,54],
+		"$show_close_button": false
+	}}	
+	]
+  },
+  
+"bg_bp_small@common.dialog_background_common": {
+    "texture": "textures/bg_bp_small"
+  },
+"bg_bp_medium@common.dialog_background_common": {
+    "texture": "textures/bg_bp_medium"
+  },
+"bg_bp_big@common.dialog_background_common": {
+    "texture": "textures/bg_bp_big"
+  },
+"bg_bp_xl@common.dialog_background_common": {
+    "texture": "textures/bg_bp_xl"
+  },
+  
+//custom scroll panel
+	"my_custom_container_no_scroll_panel_top_half":{
+	"type": "panel",
+    "size": [ "100%", 102 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",	
+	"controls": [
+      { "chest_label@chest.chest_label": {} },
+	  {"credit_panel@common.common_panel":{
+		  "layer": 999,
+		  "offset":[-95,37],
+		  "size": [ 50, 50 ],
+		  "controls":[
+			{"credit_button":{
+			"type": "button",
+			"size":[16,16],
+			"offset": [ 0, 11 ],
+			"hover_control": "credit_panel_content",
+			"controls":[
+			{"credit_icon2":{
+				"type": "image",
+				"size":[16,16],
+				"texture": "textures/ui_credit"
+			}},
+			{"credit_panel_content@chest.credit_panel_content":{
+				"offset":[-65,-35]
+			}}	
+			]
+			}}
+		  ]
+	  }},
+	  {"scrolling_panel@common.container_scroll_panel":{
+		"offset": [ 0, 11 ],
+		"size": [ 164, 90 ],
+		"$scrolling_content|default": "chest.my_custom_container_grid"
+	  }}
+    ]
+	},
+	"my_custom_container_scroll_panel_top_half":{
+	"type": "panel",
+    "size": [ "100%", 102 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",	
+	"controls": [
+      { "chest_label@chest.chest_label": {} },
+	  {"credit_panel@common.common_panel":{
+		  "layer": 999,
+		  "offset":[-95,37],
+		  "size": [ 50, 50 ],
+		  "controls":[
+			{"credit_button":{
+			"type": "button",
+			"size":[16,16],
+			"offset": [ 0, 11 ],
+			"hover_control": "credit_panel_content",
+			"controls":[
+			{"credit_icon2":{
+				"type": "image",
+				"size":[16,16],
+				"texture": "textures/ui_credit"
+			}},
+			{"credit_panel_content@chest.credit_panel_content":{
+				"offset":[-65,-35]
+			}}	
+			]
+			}}
+		  ]
+	  }},
+	  {"scrolling_panel@common.container_scroll_panel":{
+		"offset": [ 3, 11 ],
+		"size": [ 170, 90 ],
+		"$scrolling_content|default": "chest.my_custom_container_grid"
+	  }}
+    ]
+	},
+//--
+
+  "small_root_panel@common.root_panel": {
+    "$chest_panel|default": "chest.small_chest_panel_top_half",
+	"$bg_bag|default": "common.dialog_background_opaque",
+    "layer": 1,
+    "controls": [
+      { "common_panel@common.common_panel": {
+		"$dialog_background|default": "$bg_bag"
+	  } },
+      {
+        "chest_panel": {
+          "type": "panel",
+          "layer": 5,
+          "controls": [
+            { "small_chest_panel_top_half@$chest_panel": {} },
+            { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common.hotbar_grid_template": {} },
+            { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+          ]
+        }
+      },
+      { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  },              
+//setting top half for custom container
+  "backpack_root_panel@small_root_panel": {
+    "size": [ 190, 220 ],
+    "$chest_panel": "chest.my_custom_container_scroll_panel_top_half"
+  },
+  "small_backpack_root_panel@small_root_panel": {
+    "size": [ 190, 220 ],
+    "$chest_panel": "chest.my_custom_container_no_scroll_panel_top_half",
+	"$bg_bag|default": "chest.bg_bp_small"
+  },
+  "medium_backpack_root_panel@small_root_panel": {
+    "size": [ 190, 220 ],
+    "$chest_panel": "chest.my_custom_container_no_scroll_panel_top_half",
+	"$bg_bag|default": "chest.bg_bp_medium"
+  },
+  "big_backpack_root_panel@small_root_panel": {
+    "size": [ 190, 220 ],
+    "$chest_panel": "chest.my_custom_container_scroll_panel_top_half",
+	"$bg_bag|default": "chest.bg_bp_big"
+  },
+  "xl_backpack_root_panel@small_root_panel": {
+    "size": [ 190, 220 ],
+    "$chest_panel": "chest.my_custom_container_scroll_panel_top_half",
+	"$bg_bag|default": "chest.bg_bp_xl"
+  },
+//---
+  "small_chest_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 11
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@$root_panel": { }
+      }
+    ]
+  },
+  "ender_chest_panel@chest.small_chest_panel": {
+  },
+  
+  "small_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$root_panel|default": "chest.small_root_panel", //default root panel
+    "$new_container_title|default": "$container_title", //title of container
+    "$container_size|default": 27, //default size if nothing matches   
+	"variables":[
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.small_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.small_chest_panel"
+      },
+	  {
+		"requires": "($pocket_screen and ($container_title = 'Backpack'))",
+		"$container_title": "$new_container_title",
+		"$screen_content": "chest.backpack_root_panel"
+	  },
+	  {
+		"requires": "($container_title = 'Small Backpack')",
+		"$root_panel": "chest.small_backpack_root_panel",
+		"$new_container_title": "Backpack",
+		"$container_size": 54
+	  },
+	  {
+		"requires": "($container_title = 'Medium Backpack')",
+		"$root_panel": "chest.medium_backpack_root_panel",
+		"$new_container_title": "Backpack",
+		"$container_size": 54
+	  },
+	  {
+		"requires": "($container_title = 'Big Backpack')",
+		"$root_panel": "chest.big_backpack_root_panel",
+		"$new_container_title": "Backpack",
+		"$container_size": 54
+	  },
+	  {
+		"requires": "($container_title = 'XL Backpack')",
+		"$root_panel": "chest.xl_backpack_root_panel",
+		"$new_container_title": "Backpack",
+		"$container_size": 54
+	  },
+	  {
+		"requires": "($container_title = 'Backpack')",
+		"$root_panel": "chest.backpack_root_panel",
+		"$new_container_title": "Backpack",
+		"$container_size": 54
+	  },
+	  {
+		"requires": "($pocket_screen and ($container_title = 'Small Backpack'))",
+		"$container_title": "$new_container_title",
+		"$screen_content": "chest.small_backpack_root_panel"
+	  },
+	  {
+		"requires": "($pocket_screen and ($container_title = 'Medium Backpack'))",
+		"$container_title": "$new_container_title",
+		"$screen_content": "chest.medium_backpack_root_panel"
+	  },
+	  {
+		"requires": "($pocket_screen and ($container_title = 'Big Backpack'))",
+		"$container_title": "$new_container_title",
+		"$screen_content": "chest.big_backpack_root_panel"
+	  },
+	  {
+		"requires": "($pocket_screen and ($container_title = 'XL Backpack'))",
+		"$container_title": "$new_container_title",
+		"$screen_content": "chest.xl_backpack_root_panel"
+	  }
+	]
+  },
+  //Fixes inventory screen of ender chest disappearing
+  "ender_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.small_root_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.ender_chest_panel"
+      }
+    ]
+  }
+}

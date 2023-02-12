@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§cRequires Advanced Machinery addon\n§fJoin my Discord: https://discord.gg/xu7G4nG",
+        "name": "§c§lAdvanced Machinery Expansion §r[R] v1.0.8",
+        "uuid": "f835b12e-54f7-4dda-96e4-7d47aefcb43d",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "§cRequires Advanced Machinery addon\n§fJoin my Discord: https://discord.gg/xu7G4nG",
+            "type": "resources",
+            "uuid": "76c5ff21-42dc-47a5-9ebb-e12514dd8cf0",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "f7191dfd-ff3f-42fe-9170-0b9e58b35e5d",
+            "version": [0, 0, 1]
+        }
+    ]
+}

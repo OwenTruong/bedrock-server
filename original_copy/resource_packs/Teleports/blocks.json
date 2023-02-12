@@ -1,0 +1,23 @@
+{
+  "version": [ 1, 1, 0 ],
+  "elevator:elevator_1": {
+    "textures": "elevator_1",
+    "sound": "wool"
+  },
+  "elevator:elevator_2": {
+    "textures": "elevator_2",
+    "sound": "wool"
+  },
+  "elevator:elevator_3": {
+    "textures": "elevator_3",
+    "sound": "wool"
+  },
+  "elevator:elevator_4": {
+    "textures": "elevator_4",
+    "sound": "wool"
+  },
+  "elevator:elevator_5": {
+    "textures": "elevator_5",
+    "sound": "wool"
+  }
+}

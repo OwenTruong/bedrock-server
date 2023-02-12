@@ -1,0 +1,132 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+  "spawn_drying_rack": {
+     "textures": "textures/items/spawn_drying_rack"
+  },
+  "spawn_sorter": {
+     "textures": "textures/items/spawn_sorter"
+  },
+  "spawn_conveyor": {
+     "textures": "textures/items/spawn_conveyor"
+  },
+  "spawn_router": {
+     "textures": "textures/items/spawn_router"
+  },
+  "spawn_advanced_conveyor": {
+     "textures": "textures/items/spawn_advanced_conveyor"
+  },
+  "spawn_block_breaker": {
+     "textures": "textures/items/spawn_block_breaker"
+  },
+  "spawn_storage_unit": {
+     "textures": "textures/items/spawn_storage_unit"
+  },
+  "pebble": {
+     "textures": "textures/items/pebble"
+  },
+  "machinerytutorial": {
+     "textures": "textures/items/machinerytutorial"
+  },
+  "diamond_nugget": {
+     "textures": "textures/items/diamond_nugget"
+  },
+  "emerald_nugget": {
+     "textures": "textures/items/emerald_nugget"
+  },
+  "spawn_combustion_generator": {
+     "textures": "textures/items/spawn_combustion_generator"
+  },
+  "spawn_lava_generator": {
+     "textures": "textures/items/spawn_lava_generator"
+  },
+  "spawn_mechanical_furnace": {
+     "textures": "textures/items/spawn_mechanical_furnace"
+  },
+  "spawn_sieve": {
+     "textures": "textures/items/spawn_sieve"
+  },
+  "spawn_auto_sieve": {
+     "textures": "textures/items/spawn_auto_sieve"
+  },
+  "spawn_solar_generator": {
+     "textures": "textures/items/spawn_solar_generator"
+  },
+  "spawn_advanced_solar_generator": {
+     "textures": "textures/items/spawn_advanced_solar_generator"
+  },
+  "spawn_void_miner": {
+     "textures": "textures/items/spawn_void_miner"
+  },
+  "spawn_power_core": {
+     "textures": "textures/items/spawn_power_core"
+  },
+  "spawn_water_wheel": {
+     "textures": "textures/items/spawn_water_wheel"
+  },
+  "spawn_auto_farmer": {
+     "textures": "textures/items/spawn_auto_farmer"
+  },
+  "spawn_stone_barrel": {
+     "textures": "textures/items/spawn_stone_barrel"
+  },
+  "spawn_vacuum_hopper": {
+     "textures": "textures/items/spawn_vacuum_hopper"
+  },
+  "spawn_wooden_barrel": {
+     "textures": "textures/items/spawn_wooden_barrel"
+  },
+  "spawn_chunk_loader": {
+     "textures": "textures/items/spawn_chunk_loader"
+  },
+  "spawn_matter_converter": {
+     "textures": "textures/items/spawn_matter_converter"
+  },
+  "spawn_cobblestone_generator": {
+     "textures": "textures/items/spawn_cobblestone_generator"
+  },
+  "spawn_crusher": {
+     "textures": "textures/items/spawn_crusher"
+  },
+  "spawn_auto_fisher": {
+     "textures": "textures/items/spawn_auto_fisher"
+  },
+  "spawn_bio_generator": {
+     "textures": "textures/items/spawn_bio_generator"
+  },
+  "spawn_chopper": {
+     "textures": "textures/items/spawn_chopper"
+  },
+  "spawn_endcake": {
+     "textures": "textures/items/spawn_endcake"
+  },
+  "spawn_enderegggenerator": {
+     "textures": "textures/items/spawn_enderegggenerator"
+  },
+  "spawn_spawner": {
+     "textures": "textures/items/spawn_spawner"
+  },
+  "spawn_spike": {
+     "textures": "textures/items/spawn_spike"
+  },
+  "spawn_steam_generator": {
+     "textures": "textures/items/spawn_steam_generator"
+  },
+  "wood_hammer": {
+     "textures": "textures/items/wood_hammer"
+  },
+  "stone_hammer": {
+     "textures": "textures/items/stone_hammer"
+  },
+  "iron_hammer": {
+     "textures": "textures/items/iron_hammer"
+  },
+  "gold_hammer": {
+     "textures": "textures/items/gold_hammer"
+  },
+  "diamond_hammer": {
+     "textures": "textures/items/diamond_hammer"
+  }
+ }
+}

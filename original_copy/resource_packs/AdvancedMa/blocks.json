@@ -1,0 +1,155 @@
+{
+  "format_version": [ 0, 0, 1 ],
+  "vatonage:drying_rack": {
+    "textures": "drying_rack",
+    "sound": "wood"
+  },
+  "vatonage:auto_sieve": {
+    "textures": "auto_sieve",
+    "sound": "stone"
+  },
+  "vatonage:stone_barrel": {
+    "textures": "stone_barrel",
+    "sound": "stone"
+  },
+  "vatonage:stone_barrel1": {
+    "textures": "stone_barrel1",
+    "sound": "stone"
+  },
+  "vatonage:stone_barrel2": {
+    "textures": "stone_barrel2",
+    "sound": "stone"
+  },
+  "vatonage:lava_generator": {
+    "textures": "lava_generator",
+    "sound": "stone"
+  },
+  "vatonage:lava_generator_half": {
+    "textures": "lava_generator_half",
+    "sound": "stone"
+  },
+  "vatonage:lava_generator_active": {
+    "textures": "lava_generator_active",
+    "sound": "stone"
+  },
+  "vatonage:combustion_generator": {
+    "textures": "combustion_generator",
+    "sound": "stone"
+  },
+  "vatonage:combustion_generator_active": {
+    "textures": "combustion_generator_active",
+    "sound": "stone"
+  },
+  "vatonage:matter_converter": {
+    "textures": "matter_converter",
+    "sound": "stone"
+  },
+  "vatonage:mechanical_furnace": {
+    "textures": "mechanical_furnace",
+    "sound": "stone"
+  },
+  "vatonage:sieve": {
+    "textures": "sieve0",
+    "sound": "stone"
+  },
+  "vatonage:solar_generator": {
+    "textures": "solar_generator",
+    "sound": "stone"
+  },
+  "vatonage:advanced_solar_generator": {
+    "textures": "advanced_solar_generator",
+    "sound": "stone"
+  },
+  "vatonage:void_miner": {
+    "textures": "void_miner",
+    "sound": "stone"
+  },
+  "vatonage:auto_farmer": {
+    "textures": "auto_farmer",
+    "sound": "stone"
+  },
+  "vatonage:wooden_barrel": {
+    "textures": "wooden_barrel",
+    "sound": "stone"
+  },
+  "vatonage:wooden_barrel1": {
+    "textures": "wooden_barrel1",
+    "sound": "stone"
+  },
+  "vatonage:wooden_barrel2": {
+    "textures": "wooden_barrel2",
+    "sound": "stone"
+  },
+  "vatonage:chunk_loader": {
+    "textures": "chunk_loader",
+    "sound": "stone"
+  },
+  "vatonage:chunk_loader_active": {
+    "textures": "chunk_loader_active",
+    "sound": "stone"
+  },
+  "vatonage:cobblestone_generator": {
+    "textures": "cobblestone_generator",
+    "sound": "stone"
+  },
+  "vatonage:vacuum_hopper": {
+    "textures": "vacuum_hopper",
+    "sound": "stone"
+  },
+  "vatonage:water_wheel": {
+    "textures": "water_wheel",
+    "sound": "stone"
+  },
+  "vatonage:crusher": {
+    "textures": "crusher",
+    "sound": "stone"
+  },
+  "vatonage:steam_active": {
+    "textures": "steam",
+    "sound": "stone"
+  },
+  "vatonage:spike": {
+    "textures": "spike",
+    "sound": "stone"
+  },
+  "vatonage:hostile_spawner": {
+    "textures": "spawner",
+    "sound": "stone"
+  },
+  "vatonage:passive_spawner": {
+    "textures": "spawner",
+    "sound": "stone"
+  },
+  "vatonage:nether_spawner": {
+    "textures": "spawner",
+    "sound": "stone"
+  },
+  "vatonage:fisher": {
+    "textures": "fisher",
+    "sound": "stone"
+  },
+  "vatonage:enderegggenerator": {
+    "textures": "enderegggenerator",
+    "sound": "stone"
+  },
+  "vatonage:endcake": {
+    "textures": "endcake",
+    "sound": "stone"
+  },
+  "vatonage:chopper": {
+    "textures": "chopper",
+    "sound": "stone"
+  },
+  "vatonage:bio_active": {
+    "textures": "bio",
+    "sound": "stone"
+  },
+  "vatonage:bio": {
+    "textures": "bio",
+    "sound": "stone"
+  },
+  "vatonage:steam": {
+    "textures": "steam",
+    "sound": "stone"
+  }
+}
