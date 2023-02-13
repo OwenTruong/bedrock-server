@@ -1,5 +1,6 @@
 import fs from 'fs';
-import { basename, join } from 'path';
+
+// TODO: EXPORT SHELL VARIABLES TO DOCKERFILE
 
 // console.log('hello world');
 // fs.writeFileSync('./test.txt', 'hello world');
@@ -37,12 +38,12 @@ const props = {
   'disable-player-interaction': false,
 };
 
-fs.writeFileSync('./why.txt', JSON.stringify(process.env));
+(() => {
+  let str = '';
 
-let str = '';
+  Object.entries(props).forEach(([key, value]) => {
+    str += `${key}=${value}\n`;
+  });
 
-Object.entries(props).forEach(([key, value]) => {
-  str += `${key}=${value}\n`;
-});
-
-fs.writeFileSync('./server.properties', str);
+  fs.writeFileSync('./server.properties', str);
+})();

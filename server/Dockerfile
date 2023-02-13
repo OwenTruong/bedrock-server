@@ -4,14 +4,15 @@ FROM ubuntu:latest
 WORKDIR /server
 COPY . .
 RUN apt update
-RUN apt-get install -y curl gnupg
+RUN apt-get install -y curl 
+# gnupg
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
-RUN node index.mjs
-CMD ["./bedrock_server"]
+
+CMD ["bash", "-c", "node index.mjs; ./bedrock_server"]
 EXPOSE 19132
 
-
+# TODO: Use printenv and send result to a .env file and have index.mjs load it up
 # Commands
 # ENV 
 # docker build -t bedrock-server .
