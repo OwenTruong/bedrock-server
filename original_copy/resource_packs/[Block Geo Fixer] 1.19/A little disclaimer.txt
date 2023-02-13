@@ -1,5 +1,0 @@
-This is a module that uses a marketplace manifest to fix the problem. the manifest has been improved and polish to be better. in some devices when you go to a realm with this pack.
-
-The Sonic bug in realms has been fixed with the permission of WTFverse, thanks to him the bug has been fully fixed but on some devices it is still there. we can't fix this and it's up to mojang.
-
-This is not a virus, it's just one more addon from the bunch

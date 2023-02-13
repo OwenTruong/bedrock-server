@@ -1,5 +1,0 @@
-item.pog:player_corpse_spawn_egg.name=Spawn Player Corpse
-text.death_coords.dimension.overworld=§aOverworld
-text.death_coords.dimension.nether=§cNether
-text.death_coords.dimension.end=§dEnd
-status.playerDied=§a%1 §rdied at: §b%2, %3, %4, §r§fin The %5

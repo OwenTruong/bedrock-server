@@ -1,7 +1,0 @@
-[
-    {
-        "flipbook_texture": "textures/blocks/battery1_block",
-        "atlas_tile": "battery1_block",
-        "ticks_per_frame": 20
-    }
-]

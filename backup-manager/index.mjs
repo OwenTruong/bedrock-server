@@ -141,7 +141,9 @@ const waitForWorldGeneration = (ms, startBackups) => {
       setBackupTime.bind(null, backupTimeInMS, NUM_OF_BACKUPS)
     );
   else if (!doesExist(current) && !isZero(backups.length)) {
-    fs.cpSync(getChildDirPathOf(BACKUP_PATH, -1), CURRENT_WORLD_PATH);
+    fs.cpSync(getChildDirPathOf(BACKUP_PATH, -1), CURRENT_WORLD_PATH, {
+      recursive: true,
+    });
     setBackupTime(backupTimeInMS, NUM_OF_BACKUPS);
   } else if (doesExist(current)) setBackupTime(backupTimeInMS, NUM_OF_BACKUPS);
   else

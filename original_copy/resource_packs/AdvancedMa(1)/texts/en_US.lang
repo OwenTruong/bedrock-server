@@ -1,7 +1,0 @@
-item.spawn_egg.entity.amep:teleport_pylon.name=Pylon §4500 RF/teleport
-item.spawn_egg.entity.amep:battery0.name=Battery §aHolds 500,000 RF
-tile.amep:cable.name=Power Cable
-tile.amep:transfer_cable.name=Power Transfer Cable §aTransfer: 28 RF/s
-tile.amep:transfer_cable2.name=Advanced Power Transfer Cable §aTransfer: 85 RF/s
-tile.amep:conveyor_slope.name=Conveyor Slope
-tile.amep:advancedconveyor_slope.name=Advanced Conveyor Slope

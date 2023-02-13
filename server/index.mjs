@@ -1,9 +1,5 @@
 import fs from 'fs';
 
-// TODO: EXPORT SHELL VARIABLES TO DOCKERFILE
-
-// console.log('hello world');
-// fs.writeFileSync('./test.txt', 'hello world');
 const props = {
   'server-name': process.env.SERVER_NAME,
   gamemode: process.env.GAMEMODE,
