@@ -1,6 +1,7 @@
 services:
   bedrock-server:
     build: ./server
+    image: owentruong/bedrock-server:latest
     volumes:
       - current-world:/server/bedrock-server/worlds
       - ${BACKUP_PATH:-./backups}:/backups
@@ -22,6 +23,7 @@ services:
       - TICK_DISTANCE=${TICK_DISTANCE:-4}
       - PLAYER_IDLE_TIMEOUT=${PLAYER_IDLE_TIMEOUT:-0}
       - MAX_THREADS=${MAX_THREADS:-0}
+      - LEVEL_NAME=${LEVEL_NAME:-Bedrock\ level}
       - LEVEL_SEED=${LEVEL_SEED:-}
       - DEFAULT_PLAYER_PERMISSION_LEVEL=${DEFAULT_PLAYER_PERMISSION_LEVEL:-member}
       - TEXTUREPACK_REQUIRED=${TEXTUREPACK_REQUIRED:-true}
@@ -40,14 +42,16 @@ services:
 
   create-backups:
     build: ./backup-manager
+    image: owentruong/bedrock-server-create-backups:latest
     volumes:
       - current-world:/current
       - ${BACKUP_PATH:-./backups}:/backups
     environment:
       - BACKUP_PATH=/backups
       - CURRENT_WORLD_PATH=/current
-      - BACKUP_TIME=${BACKUP_TIME:-1}
+      - BACKUP_TIME=${BACKUP_TIME:-0.1}
       - NUM_OF_BACKUPS=${NUM_OF_BACKUPS:-15}
+      - LEVEL_NAME=${LEVEL_NAME:-Bedrock\ level}
 
 volumes:
   current-world:

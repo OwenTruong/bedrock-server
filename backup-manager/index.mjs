@@ -1,6 +1,8 @@
 import fs from 'fs';
 import { basename, join } from 'path';
 
+// TODO: Allows users to choose if they want to pick a specific backup to load it to current world
+
 /* At Start */
 // There is no world in current-world
 // There are no backup worlds
@@ -29,6 +31,7 @@ const BACKUP_PATH = process.env.BACKUP_PATH;
 const CURRENT_PATH = process.env.CURRENT_WORLD_PATH;
 const BACKUP_TIME = process.env.BACKUP_TIME;
 const NUM_OF_BACKUPS = process.env.NUM_OF_BACKUPS;
+const LEVEL_NAME = process.env.LEVEL_NAME;
 
 /*******************
  * HELPER FUNCTIONS
@@ -91,8 +94,7 @@ const setBackupTime = (time, maxBackups) => {
   };
 
   setInterval(() => {
-    const currentWorldPath =
-      CURRENT_PATH + '/' + getWorldNames(CURRENT_PATH)[0];
+    const currentWorldPath = CURRENT_PATH + '/' + LEVEL_NAME;
     const currentWorldName = basename(currentWorldPath);
 
     if (getWorldNames(BACKUP_PATH).length >= maxBackups)
@@ -122,18 +124,17 @@ const waitForWorldGeneration = (ms, startBackups) => {
 /*******************
  * START HERE
  *******************/
-
 (() => {
   const doesExist = (obj) => obj !== undefined;
   const isZero = (num) => num === 0;
 
-  const CURRENT_WORLD_PATH = `${CURRENT_PATH}/Bedrock\ level`;
-  const [current, ...otherCurrents] = getWorldNames(CURRENT_PATH);
+  const CURRENT_WORLD_PATH = `${CURRENT_PATH}/${LEVEL_NAME}`;
+  const current = getWorldNames(CURRENT_PATH).filter(
+    (name) => (name = basename(CURRENT_WORLD_PATH))
+  )[0];
   const backups = getWorldNames(BACKUP_PATH);
   const backupTimeInMin = BACKUP_TIME;
   const backupTimeInMS = backupTimeInMin * 60 * 1000;
-  if (otherCurrents.length !== 0)
-    throw new Error('current-world volume has more than 1 world');
 
   if (!doesExist(current) && isZero(backups.length))
     waitForWorldGeneration(
