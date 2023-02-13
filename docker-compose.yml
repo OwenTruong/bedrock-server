@@ -2,7 +2,7 @@ services:
   bedrock-server:
     build: ./server
     volumes:
-      - current-world:/server/worlds
+      - current-world:/server/bedrock-server/worlds
       - ${BACKUP_PATH:-./backups}:/backups
     networks:
       bedrock:

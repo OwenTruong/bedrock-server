@@ -41,5 +41,5 @@ const props = {
     str += `${key}=${value}\n`;
   });
 
-  fs.writeFileSync('./server.properties', str);
+  fs.writeFileSync('./bedrock-server-server.properties', str);
 })();
