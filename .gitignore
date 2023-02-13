@@ -1,6 +1,6 @@
 .DS_Store
 
-server/worlds
 Bedrock level
 backups
 original_copy
+server/bedrock-server
