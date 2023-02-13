@@ -16,7 +16,7 @@ const props = {
   'tick-distance': process.env.TICK_DISTANCE,
   'player-idle-timeout': process.env.PLAYER_IDLE_TIMEOUT,
   'max-threads': process.env.MAX_THREADS,
-  'level-name': 'Bedrock level',
+  'level-name': process.env.LEVEL_NAME,
   'level-seed': process.env.LEVEL_SEED,
   'default-player-permission-level':
     process.env.DEFAULT_PLAYER_PERMISSION_LEVEL,
@@ -47,5 +47,9 @@ const props = {
     str += `${key}=${value}\n`;
   });
 
+  // const atLeastOneIsValid = Object.values(props).reduce(
+  //   (acc, value) => acc || value !== undefined,
+  //   false
+  // );
   fs.writeFileSync('./bedrock-server/server.properties', str);
 })();
