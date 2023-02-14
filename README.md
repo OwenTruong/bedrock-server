@@ -19,8 +19,11 @@ create-backups will create backups of the world running periodically. You can se
 ### Environment Variables (and Defaults)
 
 - BACKUP_PATH -> ./backups
+- CURRENT_WORLD_PATH -> /current
 - BACKUP_TIME -> 5
 - NUM_OF_BACKUPS -> 15
+- LEVEL_NAME -> Bedrock level
+- USE_THIS_WORLD -> (empty by default)
 
 Just like for "bedrock-server", there are three ways to set environment variables.
 

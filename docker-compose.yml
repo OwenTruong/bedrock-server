@@ -49,7 +49,7 @@ services:
     environment:
       - BACKUP_PATH=/backups
       - CURRENT_WORLD_PATH=/current
-      - BACKUP_TIME=${BACKUP_TIME:-0.1}
+      - BACKUP_TIME=${BACKUP_TIME:-5}
       - NUM_OF_BACKUPS=${NUM_OF_BACKUPS:-15}
       - LEVEL_NAME=${LEVEL_NAME:-Bedrock level}
       - USE_THIS_WORLD=${USE_THIS_WORLD:-}
