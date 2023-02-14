@@ -32,6 +32,7 @@ const CURRENT_PATH = process.env.CURRENT_WORLD_PATH;
 const BACKUP_TIME = process.env.BACKUP_TIME;
 const NUM_OF_BACKUPS = process.env.NUM_OF_BACKUPS;
 const LEVEL_NAME = process.env.LEVEL_NAME;
+const USE_THIS_WORLD = process.env.USE_THIS_WORLD;
 
 /*******************
  * HELPER FUNCTIONS
@@ -103,6 +104,7 @@ const setBackupTime = (time, maxBackups) => {
         force: true,
       });
 
+    // currentWorldPath and currentWorldName should not contain any backslash
     fs.cpSync(currentWorldPath, getDstPath(currentWorldName), {
       recursive: true,
     });
@@ -121,6 +123,39 @@ const waitForWorldGeneration = (ms, startBackups) => {
   }, ms);
 };
 
+// If the world the user wants to back up to does not exist, ignore and continue
+
+/**
+ *
+ * @param {number} time
+ * @param {number} maxBackups
+ * @param {string} worldName
+ * @returns {boolean} Whether or not the world was started correctly
+ */
+const startThisWorld = (worldName) => {
+  // Assumption that there are no duplicate worlds
+  const worlds = getWorldNames(BACKUP_PATH);
+  if (worlds.filter((world) => world === worldName)[0] === undefined)
+    return false;
+
+  fs.cpSync(join(BACKUP_PATH, worldName), join(CURRENT_PATH, worldName), {
+    recursive: true,
+  });
+
+  if (
+    getWorldNames(CURRENT_PATH).filter((world) => world === LEVEL_NAME)[0] !==
+    undefined
+  ) {
+    console.log(
+      `${LEVEL_NAME} already exist in "current" volume. World in "current" will be replaced.`
+    );
+    fs.rmSync(join(CURRENT_PATH, LEVEL_NAME), { recursive: true, force: true });
+  }
+
+  fs.renameSync(join(CURRENT_PATH, worldName), join(CURRENT_PATH, LEVEL_NAME));
+
+  return true;
+};
 /*******************
  * START HERE
  *******************/
@@ -135,6 +170,8 @@ const waitForWorldGeneration = (ms, startBackups) => {
   const backups = getWorldNames(BACKUP_PATH);
   const backupTimeInMin = BACKUP_TIME;
   const backupTimeInMS = backupTimeInMin * 60 * 1000;
+
+  if (USE_THIS_WORLD !== '') startThisWorld(USE_THIS_WORLD);
 
   if (!doesExist(current) && isZero(backups.length))
     waitForWorldGeneration(

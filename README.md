@@ -34,5 +34,6 @@ Just like for "bedrock-server", there are three ways to set environment variable
 
 ### Things To Look Out For
 
-- A way to delete the worlds in the "current" volume is not provided to prevent the accidental deletion of a world. Please delete the "current" volume manually using docker volume rm command.
+- **WARNING: If you were to set the current world using USE_THIS_WORLD environment and a world with the same name as the LEVEL_NAME in "current-world" exists, then the world with the LEVEL_NAME will be overwritten with the one from USE_THIS_WORLD.**
+- When you set a new LEVEL_NAME, the old world in "current-world" volume will not be deleted. If you would like to use the old world again, set the old world's LEVEL_NAME. The only solution to delete the old world for now is to delete the "current-world" volume completely.
 - The configuration for IP worked for me, but may not work for you if your local IP is different from 192.168.1.X. Please change the subnet, ip_range and gateway if needed be in networks->bedrock->ipam->config.
