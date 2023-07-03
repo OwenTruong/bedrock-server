@@ -2,14 +2,17 @@
 
 FROM ubuntu:latest
 WORKDIR /server
-COPY . .
+COPY ./index.mjs ./index.mjs
 RUN apt update
 RUN apt-get install -y curl 
 # gnupg
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs unzip
+RUN curl -o server.zip "https://minecraft.azureedge.net/bin-linux/bedrock-server-1.20.1.02.zip"
+RUN unzip server.zip -d .
+RUN rm -f server.zip
 
-CMD ["bash", "-c", "node index.mjs; cd bedrock-server; ./bedrock_server"]
+CMD ["bash", "-c", "node index.mjs; ./bedrock_server"]
 EXPOSE 19132
 
 # TODO: Use printenv and send result to a .env file and have index.mjs load it up

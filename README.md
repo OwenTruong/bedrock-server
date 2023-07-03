@@ -4,6 +4,8 @@
 
 A Docker app with two services: one service for setting server.properties and starting the bedrock_server, and another service for creating periodic backups.
 
+By using this software, you agree with the Minecraft End User License Agreement and Privacy Policy.
+
 ## "bedrock-server" Service
 
 Everything should be automatic and default environments for server.properties are provided. If you need to make changes to server.properties, there are three ways:
