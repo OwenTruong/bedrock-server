@@ -19,7 +19,6 @@ Everything should be automatic and default environments for server.properties ar
 create-backups will create backups of the world running periodically. You can set the directory it backups to, the # of backups you would like and how often to back up in minutes.
 
 ### Environment Variables (and Defaults)
-
 - BACKUP_PATH -> ./backups
 - CURRENT_WORLD_PATH -> /current
 - BACKUP_TIME -> 5
